@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game List App</title>
+    <script src = "js/app.js"></script>
+</head>
+<body>
+    <form id="input-form">
+        <p>
+            <label for="title">Game Title </label>
+            <input type="text" id="title" required/>
+        </p>
+        <p>
+            <label for="genre">Genre </label>
+            <select id="genre">
+                <option value="" disabled selected>Choose a Genre</option>
+                <option value="Role Playing Game">Role Playing Game</option>
+                <option value="Action Adventure">Action Adventure</option>
+                <option value="Platformer">Platformer</option>
+                <option value="First Person Shooter">First Person Shooter</option>
+                <option value="Sports">Sports</option>
+                <option value="Side Scroller">Side Scroller</option>
+                <option value="2D Shooter">2D Shooter</option>
+            </select>
+        </p>
+        <p>
+            <label for="platform">Platform </label>
+            <select id="platform">
+                <option value="PS4">PS4</option>
+                <option value="XBox One">XBox One</option>
+                <option value="Nintendo Switch">Nintendo Switch</option>
+                <option value="PC">PC</option>
+            </select>
+        </p>
+        <p>
+            <label for="num-players">Number of Players </label>
+            <input type="number" id="num-players" min="1" max="100"/>
+        </p>
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </form>
+
+    <button id="delete-all">Delete All</button>
+
+    <h1>Video Game List</h1>
+    <ul id="game-list"></ul>
+</body>
+</html>
