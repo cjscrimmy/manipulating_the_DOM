@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const inputForm = document.querySelector('#input-form');
     inputForm.addEventListener('submit', handleNewItemFormSubmit);
+
+    const deleteAllButton = document.querySelector('#delete-all');
+    deleteAllButton.addEventListener('click', handleDeleteAllClick)
 })
 
 const handleNewItemFormSubmit = function (event) {
@@ -34,4 +37,9 @@ const createGameListItem = function (form) {
     gameListItem.appendChild(numPlayers);
 
     return gameListItem;
+}
+
+const handleDeleteAllClick = function (event) {
+    const gameList = document.querySelector("#game-list");
+    gameList.innerHTML = "";
 }
